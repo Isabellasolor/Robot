@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Posturas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Proyecto de Posturas</h1>
+        
+        <div class="robot-section">
+            <div class="robot" id="robot">
+                <div class="robot-arm left" id="leftArm">
+                    <div class="shoulder"></div>
+                    <div class="arm-segment"></div>
+                    <div class="hand"></div>
+                </div>
+                <div class="robot-head">
+                    <div class="eye left-eye"></div>
+                    <div class="eye right-eye"></div>
+                    <div class="antenna left-antenna"></div>
+                    <div class="antenna right-antenna"></div>
+                </div>
+                <div class="robot-neck"></div>
+                <div class="robot-body">
+                    <div class="body-panel"></div>
+                </div>
+                <div class="robot-legs">
+                    <div class="leg left-leg"></div>
+                    <div class="leg right-leg"></div>
+                </div>
+                <div class="robot-arm right" id="rightArm">
+                    <div class="shoulder"></div>
+                    <div class="arm-segment"></div>
+                    <div class="hand"></div>
+                </div>
+            </div>
+            <div class="status" id="status">Presiona el botón para iniciar</div>
+        </div>
+        
+        <div class="widget-camera" id="widgetCamera">
+            <div class="widget-header">
+                <span>Cámara</span>
+                <span class="detected-class" id="detectedClass">-</span>
+            </div>
+            <canvas id="canvas"></canvas>
+        </div>
+        
+        <button id="startBtn" class="btn">Iniciar</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
